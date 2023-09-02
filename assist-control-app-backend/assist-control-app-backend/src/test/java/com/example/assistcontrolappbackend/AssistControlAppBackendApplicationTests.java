@@ -1,10 +1,10 @@
-package com.example.AssistControlAppback;
+package com.example.assistcontrolappbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AssistControlAppBackApplicationTests {
+class AssistControlAppBackendApplicationTests {
 
 	@Test
 	void contextLoads() {

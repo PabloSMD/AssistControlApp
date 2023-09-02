@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>AssistControlApp-back</artifactId>
+	<artifactId>assist-control-app-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>AssistControlApp-back</name>
-	<description>Demo project for Spring Boot</description>
+	<name>assist-control-app-backend</name>
+	<description>assist-control-app-backend</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

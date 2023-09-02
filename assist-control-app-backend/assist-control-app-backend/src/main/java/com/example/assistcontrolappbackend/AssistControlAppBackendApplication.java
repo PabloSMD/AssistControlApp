@@ -1,13 +1,13 @@
-package com.example.AssistControlAppback;
+package com.example.assistcontrolappbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AssistControlAppBackApplication {
+public class AssistControlAppBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AssistControlAppBackApplication.class, args);
+		SpringApplication.run(AssistControlAppBackendApplication.class, args);
 	}
 
 }
