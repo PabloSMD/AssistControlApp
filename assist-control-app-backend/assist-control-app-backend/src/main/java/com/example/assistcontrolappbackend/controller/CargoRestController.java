@@ -1,6 +1,8 @@
 package com.example.assistcontrolappbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,8 +22,12 @@ public class CargoRestController {
     private CargosRepository cargoRepository;
 
 	@PostMapping("/cargos")
-	public Cargos createCargos(@RequestBody Cargos cargo) {
-		return cargoRepository.save(cargo);
-	}
-
+	    public ResponseEntity<Cargos> createCargos(@RequestBody Cargos cargos) {
+        try {
+            Cargos createdCargo = cargoRepository.save(cargos);
+            return new ResponseEntity<>(createdCargo, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

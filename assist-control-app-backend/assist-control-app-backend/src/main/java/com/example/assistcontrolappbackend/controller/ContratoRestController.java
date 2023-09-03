@@ -1,6 +1,8 @@
 package com.example.assistcontrolappbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +21,14 @@ public class ContratoRestController {
     private ContratosRepository contratoRepository;
 
 	@PostMapping("/contratos")
-	public Contratos creatContratos(@RequestBody Contratos contrato) {
-		return contratoRepository.save(contrato);
-	}
+	    public ResponseEntity<Contratos> createContratos(@RequestBody Contratos contratos) {
+        try {
+            Contratos createContrato = contratoRepository.save(contratos);
+            return new ResponseEntity<>(createContrato, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
     
 
 }
