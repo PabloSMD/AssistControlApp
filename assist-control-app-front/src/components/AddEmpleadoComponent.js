@@ -8,9 +8,9 @@ export const AddEmpleadoComponent = () => {
 
     const [nombres, setNombre] = useState('');
     const [apellidos, setApellido] = useState('');
-    const [correo, setCorreo] = useState('');
     const [cargo, setCargo] = useState('');
     const [contrato, setContrato] = useState('');
+        const [correo, setCorreo] = useState('');
     const navigate = useNavigate();
 
     const saveCliente = (e) => {
@@ -18,7 +18,7 @@ export const AddEmpleadoComponent = () => {
 
         // Comprueba si alguno de los campos está vacío
         if (!nombres || !apellidos || !correo || !cargo || !contrato) {
-            alert('Todos los campos deben ser llenados. Por favor, completa el formulario.');
+            alert('Todos los campos deben ser llenados. Revisa los campos nuevamente.');
             return;
         }
 
@@ -29,7 +29,7 @@ export const AddEmpleadoComponent = () => {
             navigate('/empleados')
         }).catch(error => {
             console.log(error)
-            alert('La captura de datos tuvo un error. Por favor, intenta nuevamente.');
+            alert('Ha aparecido un error, intenta nuevamente.');
         })
     }
 
@@ -39,12 +39,12 @@ export const AddEmpleadoComponent = () => {
                    <div className = "container">
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                <h2 className='text-center'>Registro de empleados</h2>
+                                <h2 className='text-center'>Agregar nuevo Empleado</h2>
                                 <div className = "card-body">
                                     <form>
                                         <div className = "form-group mb-2">
-                                            <label> Nombres: </label>
-                                            <input placeholder="nombres" 
+                                            <label> Nombre: </label>
+                                            <input placeholder="Pablo" 
                                             name="Nombres" 
                                             className="form-control" 
                                             value={nombres} 
@@ -52,8 +52,8 @@ export const AddEmpleadoComponent = () => {
                                         </div>
 
                                         <div className = "form-group mb-2">
-                                            <label> Apellidos: </label>
-                                            <input placeholder="apellidos" 
+                                            <label> Apellido: </label>
+                                            <input placeholder="San Martín" 
                                             name="Apellidos" className="form-control" 
                                             value={apellidos} 
                                             onChange={(e) => setApellido(e.target.value)}/>
@@ -61,7 +61,7 @@ export const AddEmpleadoComponent = () => {
 
                                         <div className = "form-group mb-2">
                                             <label> Correo: </label>
-                                            <input placeholder="direccion de Correo" 
+                                            <input placeholder="ejemplo@mail.cl" 
                                             name="correo" className="form-control" 
                                             value={correo} 
                                             onChange={(e) => setCorreo(e.target.value)}/>
@@ -69,7 +69,7 @@ export const AddEmpleadoComponent = () => {
 
                                         <div className = "form-group mb-2">
                                             <label> Cargo: </label>
-                                            <input placeholder="cargo" 
+                                            <input placeholder="Cargos existentes por ej: Vendedor, Chofer, etc." 
                                             name="cargo" className="form-control" 
                                             value={cargo.tipoCargo} 
                                             onChange={(e) => setCargo({tipoCargo: e.target.value})}/>
@@ -77,13 +77,15 @@ export const AddEmpleadoComponent = () => {
 
                                         <div className = "form-group mb-2">
                                             <label> Tipo Contrato: </label>
-                                            <input placeholder="tipo Contrato" 
+                                            <input placeholder="ej: jornada completa, jornada parcial" 
                                             name="Contrato" className="form-control" 
                                             value={contrato.tipoContrato} 
                                             onChange={(e) => setContrato({tipoContrato: e.target.value})}/>
                                         </div>
 
-                                        <button className="btn btn-success" onClick={(e) => saveCliente(e)}>Guardar</button>
+                                        <br></br>
+
+                                        <button className="btn btn-success" onClick={(e) => saveCliente(e)}>Registrar</button>
                                         &nbsp;&nbsp;&nbsp;
                                         <Link to='/empleados' className='btn btn-danger'>Cancelar</Link>
                                     </form>

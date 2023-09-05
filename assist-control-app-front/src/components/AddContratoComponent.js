@@ -32,19 +32,20 @@ export const AddContratoComponent = () => {
       <div className="container">
         <div className="row">
           <div className="card col-md-6 offset-md-3 offset-md-3">
-            <h2 className="text-center">Creacion de Contrato</h2>
+            <h2 className="text-center">Agregar nuevo Contrato</h2>
             <div className="card-body">
               <form>
                 <div className="form-group mb-2">
-                  <label> Tipo contrato: </label>
+                  <label> Tipo de contrato: </label>
                   <input
-                    placeholder="nuevo contrato"
+                    placeholder="ej: jornada completa "
                     name="tipoContrato"
                     className="form-control"
                     value={tipoContrato}
                     onChange={(e) => setContrato(e.target.value)}
                   />
                 </div>
+                <br></br>
 
                 <button className="btn btn-success" onClick={(e) => saveContrato(e)}>
                   Guardar

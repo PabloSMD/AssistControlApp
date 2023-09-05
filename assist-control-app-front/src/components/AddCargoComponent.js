@@ -12,9 +12,8 @@ export const AddCargoComponent = () => {
     const saveCargo = (e) => {
         e.preventDefault();
 
-        // Comprueba si el tipoCargo es vacío
         if (tipoCargo.trim() === '') {
-            alert('El campo Tipo de cargo no puede estar vacío. Por favor, completa el campo.');
+            alert('El campo Tipo de cargo no puede estar vacío. Añade información al campo.');
             return;
         }
 
@@ -34,18 +33,18 @@ export const AddCargoComponent = () => {
             <div className="container">
                 <div className="row">
                     <div className="card col-md-6 offset-md-3 offset-md-3">
-                        <h2 className='text-center'>Creacion de cargo</h2>
+                        <h2 className='text-center'>Agregar nuevo Cargo</h2>
                         <div className="card-body">
                             <form>
                                 <div className="form-group mb-2">
-                                    <label> Tipo cargo: </label>
-                                    <input placeholder="nuevo cargo"
+                                    <label> Tipo de cargo: </label>
+                                    <input placeholder="ej: vendedor"
                                         name="tipoCargo"
                                         className="form-control"
                                         value={tipoCargo}
                                         onChange={(e) => setCargo(e.target.value)} />
                                 </div>
-
+                                <br></br>
                                 <button className="btn btn-success" onClick={(e) => saveCargo(e)}>Guardar</button>
                                 &nbsp;&nbsp;&nbsp;
                                 <Link to='/empleados' className='btn btn-danger'>Cancelar</Link>
