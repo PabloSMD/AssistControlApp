@@ -36,3 +36,30 @@ code {
 .row-boton {
   text-align: right;
 }
+
+.botones {
+  border: solid 2px!important;
+  background: #029999!important;
+  border-color: white!important;
+}
+
+.botones:hover {
+  border: solid 2px!important;
+  border-color: #029999!important;
+  color: #029999!important;
+  background:  white!important;
+}
+.form-control:focus  {
+  box-shadow: 0 0 0 0.25rem #3bafaf90!important;
+} 
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem #3bafaf90;
+}
+
+.filtro:focus {
+  box-shadow: 0 0 0 0.25rem #3bafaf90!important;
+} 
+
+.dropdown-item:active {
+  background-color: #029999!important;
+}

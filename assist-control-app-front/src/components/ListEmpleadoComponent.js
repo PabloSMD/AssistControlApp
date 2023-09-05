@@ -40,7 +40,7 @@ export const ListEmpleadoComponent = () => {
 
             <div className="col-md-6">
             <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="botones btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   Seleccione una categoría para Agregar
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -53,7 +53,7 @@ export const ListEmpleadoComponent = () => {
 
 <div className="col-md-6 row-boton">
 <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="botones btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Seleccione una el tipo de Filtro
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
