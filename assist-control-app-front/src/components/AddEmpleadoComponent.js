@@ -16,7 +16,7 @@ export const AddEmpleadoComponent = () => {
     const saveCliente = (e) => {
         e.preventDefault();
 
-        // Comprueba si alguno de los campos está vacío
+    
         if (!nombres || !apellidos || !correo || !cargo || !contrato) {
             alert('Todos los campos deben ser llenados. Revisa los campos nuevamente.');
             return;

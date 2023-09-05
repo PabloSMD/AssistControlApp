@@ -11,7 +11,7 @@ export const AddContratoComponent = () => {
     e.preventDefault();
     if (tipoContrato.trim() === '') {
       alert('El campo de tipo de contrato no puede estar vacío. Por favor, completa el formulario.');
-      return; // Salir de la función si el formulario está vacío
+      return;
     }
 
     const contrato = { tipoContrato };
